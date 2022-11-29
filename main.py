@@ -6,12 +6,16 @@ def setInterval(func , time, *arguments):
     while not e.wait(time):
         func(*arguments)
 #=======================================#
+textnowUsername = "<textnowusername>"
+textnowsid_cookie = "<textnowsidcookie>"
+textnowcsrf_cookie = "<textnowcsrf_cookie>"
+#=======================================#
 Generator = DocumentGenerator()
 Format = format
 webServer = Flask(__name__)
 
 ESTTime = datetime.now(timezone(timedelta(hours=-4), 'EST'))
-client = pytextnow.Client("dev.vecio", sid_cookie="s%3AsQz3eA4g0Bl01148v7juoGha6ud2ZePQ.WrI737vlQXniH5NgjkmDcvtEkiO9VyAthY0Da3kpJXQ", csrf_cookie="s%3AF8t427RI11KaeuGYRSfUUBYq.7HNkqQudB77TNv2II7LLJOAO9u7vOf1sg3wCapqK7q4")
+client = pytextnow.Client(textnowUsername, sid_cookie=textnowsid_cookie, csrf_cookie=textnowcsrf_cookie)
 #=======================================#
 def send_message(number = "2028735033", message = False, toSend = True):
     client.send_sms("2028735033", (message or Generator.sentence()))
