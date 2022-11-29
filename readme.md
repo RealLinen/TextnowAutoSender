@@ -5,9 +5,11 @@
 =============
 Credits: Linen#3485
 =============
+
 How to get ur textnow username: https://pypi.org/project/PyTextNow/get_username.mp4
 
 How to get ur textnow cookies [ csrf and sid ]: https://pypi.org/project/PyTextNow/get_cookie.mp4
 
 =============
+
 Requirements: Don't be retarded, have decent brain cells.
